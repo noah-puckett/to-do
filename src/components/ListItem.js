@@ -1,7 +1,13 @@
 import Component from '../components/Component.js';
-import TodoList from '../components/TodoList.js';
 
 class ListItem extends Component {
+
+    // render() {
+    //     const listItem =this.renderDOM();
+    //     const onRemove = this.props.onRemove;
+    //     const //cat this.props.cat;
+    // }
+
     renderTemplate() {
         const item = this.props.item;
 

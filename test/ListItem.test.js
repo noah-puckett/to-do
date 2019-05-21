@@ -29,7 +29,7 @@ test('testing template function', function(assert) {
 // test('template function returns checked if true', function(assert) {
 //     //Arrange
     
-//     const task = {
+//     const item = {
 //         name: 'Water Plants',
 //         label: 'water-plants',
 //         completed: true
@@ -42,7 +42,8 @@ test('testing template function', function(assert) {
 //     </label>`;
 
 //     //Act 
-//     const html = template(task);
+//     const listItem = new ListItem({ item }); 
+//     const html = listItem.renderTemplate();
    
 //     //Assert
 //     assert.htmlEqual(html, expected);
@@ -69,3 +70,10 @@ test('testing template function', function(assert) {
 //     //Assert
 //     assert.htmlEqual(html, expected);
 // });
+
+
+
+// const expected li
+// h2 class name felix
+// button class= remove button? x button
+// li

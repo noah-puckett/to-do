@@ -1,5 +1,6 @@
 import htmlToDOM from '../html-to-DOM.js';
 class Component {
+
     constructor(props) {
         this.props = props;
     }
@@ -15,6 +16,20 @@ class Component {
         //for replacing or removing elements?
         this.rootElement = dom;
         return dom;
+    }
+
+    renderTemplate() {
+        return `<div></div>`;
+    }
+
+    update(props) {
+        // update the props:
+        Object.keys(props).forEach(key => {
+            this.props[key] = props[key];
+        });
+        const oldRoot = this.rootElement;
+        const newDOM = this.render();
+        oldRoot.replaceWith(newDOM);
     }
 }
 export default Component;
