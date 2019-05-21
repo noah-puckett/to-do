@@ -1,0 +1,26 @@
+#header {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#tasks label {
+    list-style: none;
+    display: flex;
+    height: 100px;
+    background-color: antiquewhite;
+    border: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
