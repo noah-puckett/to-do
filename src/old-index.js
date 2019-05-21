@@ -1,3 +1,6 @@
+//do I need this here??? is this only for the new index? TODO: what the heck
+//import App from '../src/components/App.js';
+
 //get people data, import functions
 import todoData from '../data/todo-data.js';
 import template from '../src/template.js';
