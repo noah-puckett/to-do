@@ -1,6 +1,7 @@
 import Header from '../components/Header.js';
 import Component from './Component.js';
-
+import todoData from '../../data/todo-data.js';
+import TodoList from './TodoList.js';
 
 //classes don't use commas!!!
 class App extends Component {
@@ -15,6 +16,12 @@ class App extends Component {
 
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
+
+        const props = { todoData };
+
+        const todoDataList = new TodoList(props);
+        const todoDataDOM = todoDataList.render();
+        main.appendChild(todoDataDOM);
 
         return dom;
     }
