@@ -1,4 +1,6 @@
 import template from '../src/template.js';
+import ListItem from '../src/components/ListItem.js';
+import todoData from '../data/todo-data.js';
 const test = QUnit.test;
 
 QUnit.module('templating');
@@ -18,7 +20,9 @@ test('testing template function', function(assert) {
     </label>`;
 
     //Act 
-    const html = template(task);
+    const listItem = new ListItem({ todoData });
+
+    const html = listItem.renderTemplate();
    
     //Assert
     assert.htmlEqual(html, expected);

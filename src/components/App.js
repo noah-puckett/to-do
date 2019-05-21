@@ -9,14 +9,14 @@ class App extends Component {
     //below we are rendering the whole 'app' of our website,
     //that's why we don't just render a template, this IS our 'website'
     render() {
+        //this renders the header,
         const dom = this.renderDOM();
-        //get the header's DOM
         const header = new Header();
         const headerDOM = header.render();
 
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
-
+        //this grabs data and renders our list items
         const props = { todoData };
 
         const todoDataList = new TodoList(props);
