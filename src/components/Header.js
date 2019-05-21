@@ -1,19 +1,6 @@
-import htmlToDOM from '../html-to-DOM.js';
+import Component from '../components/Component.js';
 
-class App {
-    
-    render() {
-        return this.renderDOM();
-    }
-
-    renderDOM() {
-        const html = this.renderTemplate();
-        const dom = htmlToDOM(html);
-        //remember the dom for later
-        //for replacing or removing elements?
-        this.rootElement = dom;
-        return dom;
-    }
+class Header extends Component {
     
     renderTemplate() {
         return /*html*/ `
@@ -23,4 +10,4 @@ class App {
         `;
     }
 }
-export default App;
+export default Header;
