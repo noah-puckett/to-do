@@ -2,8 +2,7 @@ import htmlToDOM from '../html-to-DOM.js';
 //THIS IS OUR MASTER FILE
 class Component {
 
-    //this is our... like I guess special method that initializes 'props' which is just properties on the object? 
-    //I think when we call the method we pass it properties???
+    //constructor initializes(?) the Component object's PROPERTIIES
     constructor(props) {
         this.props = props;
     }
@@ -30,8 +29,7 @@ class Component {
     }
 
     update(props) {
-        // update the props:
-        //I have no idea what is happening here
+        //still not sure how to articulate what is happening here
         Object.keys(props).forEach(key => {
             this.props[key] = props[key];
         });

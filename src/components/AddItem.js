@@ -1,12 +1,13 @@
 import Component from '../components/Component.js';
-//I DO NOT KNOW WHAT THIS FILE DOES
+//the AddItem component's main job is to alter how we render the HTML-- we render our form (passing in strings and returning DOM elements)
+//subscribe an event listener, and 
 class AddItem extends Component {
 
     render() {
         const form = this.renderDOM();
         const onAdd = this.props.onAdd;
 
-
+        //this is our typical event listener layout
         form.addEventListener('submit', event => {
             event.preventDefault();
 
@@ -17,8 +18,10 @@ class AddItem extends Component {
                 type: formData.get('type')
             };
 
+            //here we call our onAdd method(function?), which updates the AddItem PROPERTIES-- ultimately updating the todoData list with the newItem var
             onAdd(newItem);
 
+            //this clears our form after the submit event, then the next line deals with focusing the input field
             form.reset();
             document.activeElement.blur();
         });
