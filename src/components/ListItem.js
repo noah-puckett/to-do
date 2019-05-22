@@ -1,11 +1,12 @@
 import Component from '../components/Component.js';
 //THIS FILE RENDERS INDIVIDUAL ITEMS IN OUR HTML
 class ListItem extends Component {
-
+    
+    //this will eventuallly alter our render method to remove items from our todoData array
     // render() {
-    //     const listItem =this.renderDOM();
+    //     const listItem = this.renderDOM();
     //     const onRemove = this.props.onRemove;
-    //     const //cat this.props.cat;
+    //     const item = this.props.item;
     // }
 
     renderTemplate() {
