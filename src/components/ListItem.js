@@ -1,5 +1,5 @@
 import Component from '../components/Component.js';
-
+//THIS FILE RENDERS INDIVIDUAL ITEMS IN OUR HTML
 class ListItem extends Component {
 
     // render() {

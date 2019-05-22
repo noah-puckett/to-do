@@ -3,7 +3,7 @@ import Component from './Component.js';
 import AddItem from '../components/AddItem.js';
 import todoData from '../../data/todo-data.js';
 import TodoList from './TodoList.js';
-
+//THIS FILE RENDERS OUR WEBSITE DYNAMICALLY
 //classes don't use commas!!!
 class App extends Component {
     
@@ -18,6 +18,7 @@ class App extends Component {
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
         //this grabs data and renders our list items
+        //below, TODODATA is pulled from our data list and given to... properties of the... something object?
         const props = { todoData };
 
         const addItem = new AddItem({
@@ -32,10 +33,8 @@ class App extends Component {
                 todoDataList.update({ todoData });
             }
         });
-        console.log(addItem);
 
         const addItemDOM = addItem.render();
-        console.log(addItemDOM.innerHTML);
         main.appendChild(addItemDOM);
         
 

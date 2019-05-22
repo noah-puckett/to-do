@@ -1,4 +1,5 @@
 import htmlToDOM from '../html-to-DOM.js';
+//THIS IS OUR MASTER FILE
 class Component {
 
     constructor(props) {

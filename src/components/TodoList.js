@@ -1,14 +1,12 @@
 import Component from '../components/Component.js';
 import ListItem from '../components/ListItem.js';
-
-
+//THIS FILE does SOMETHING but I don't actually know WHAT
 class TodoList extends Component {
 
     render() {
         const dom = this.renderDOM();
-
         const todoData = this.props.todoData;
-        console.log(this.props.todoData);
+        
         todoData.forEach(item => {
             const listItem = new ListItem ({ item });
             const listItemDOM = listItem.render();
@@ -22,7 +20,7 @@ class TodoList extends Component {
         //WHAT EVEN ARE PROPS???
         const todos = this.props.todoData;
         return /*html*/ `
-            <ul>${todos.length} is here</ul>
+            <ul>${todos.length} are in my array</ul>
         `;
     }
 }

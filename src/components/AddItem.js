@@ -1,5 +1,5 @@
 import Component from '../components/Component.js';
-
+//I DO NOT KNOW WHAT THIS FILE DOES
 class AddItem extends Component {
 
     render() {
@@ -26,7 +26,7 @@ class AddItem extends Component {
         return form;
     }
 
-    renderTemplete() {
+    renderTemplate() {
         return /*html*/ `
         <form class="add-item">
             <label>Name: <input name="name"></label>
