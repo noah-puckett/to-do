@@ -57,11 +57,7 @@ class App extends Component {
         return /*html*/ `
         <div>
             <main>
-                <ul id="todo-list">
-                    <li>whaaaaat is happening</li>
-                    <li>maaaayyyybe I understand what's happening?</li>
-                    <li>DEFINITELY do not understand what is happening</li>
-                </ul>
+                <ul id="todo-list"></ul>
             </main>
         </div>
         `;

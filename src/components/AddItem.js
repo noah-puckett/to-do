@@ -34,7 +34,7 @@ class AddItem extends Component {
         <form class="add-item">
             <label>Name: <input name="name"></label>
             <label>Type: <input name="type"></label>
-            <button>Add</button>
+            <button>Add Item</button>
         </form>
         `;
     }
