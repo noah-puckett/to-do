@@ -2,7 +2,7 @@ import Header from '../components/Header.js';
 import Component from './Component.js';
 import AddItem from '../components/AddItem.js';
 import Filter from './Filter.js';
-//import filterItems from '../filter-items.js';
+import filterItems from '../filter-items.js';
 import todoData from '../../data/todo-data.js';
 import TodoList from './TodoList.js';
 
@@ -35,6 +35,7 @@ class App extends Component {
         const filter = new Filter({
             onFilter: filter => {
                 const filtered = filterItems(todoData, filter);
+                console.log(filtered);
                 todoList.update({ todoData: filtered }); 
             }
         });
