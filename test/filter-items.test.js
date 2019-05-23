@@ -1,7 +1,24 @@
 const test = QUnit.test;
 
+const todoData = [
+    {
+        name: 'Eat Breakfast',
+        label: 'eat-breakfast',
+        completed: false
+    },
+    {
+        name: 'Eat Lunch',
+        label: 'eat-lunch',
+        completed: false
+    },
+    {
+        name: 'Eat Dinner',
+        label: 'eat-dinner',
+        completed: false
+    }
+];
+
 QUnit.module('filter items');
-//make const ITEMS array
 
 function filterItems(items, filter) {
     const lowerCaseNameFilter = filter.name.toLowerCase();
@@ -19,14 +36,15 @@ function filterItems(items, filter) {
 test('filters on name', assert => {
     //arrange
     const filter = {
-        name: 'duc',
+        name: 'bre',
     };
 
-    const filtered = filterItems(items, filter);
+    const filtered = filterItems(todoData, filter);
 
     assert.deepEqual(filtered, [{
-        name: 'Duchess',
-        type: 'Angora'
+        name: 'Eat Breakfast',
+        label: 'eat-breakfast',
+        completed: false
     }]);
 
 });
