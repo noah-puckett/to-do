@@ -20,14 +20,15 @@ const todoData = [
 
 QUnit.module('filter items');
 
-function filterItems(items, filter) {
+function filterItems(todoData, filter) {
     const lowerCaseNameFilter = filter.name.toLowerCase();
-    return items.filter(item => {
-        const lowerCaseName = item.name.toLowerCase();
-        const hasName = !lowerCaseNameFilter || lowerCaseName.includes(lowerCaseNameFilter);
-        const hasType = !filter.type || item.type === filter.type;
 
-        return hasName && hasType;
+    return todoData.filter(todo => {
+        const lowerCaseName = todo.name.toLowerCase();
+        const hasName = !lowerCaseNameFilter || lowerCaseName.includes(lowerCaseNameFilter);
+        const hasLabel = !filter.label || todo.label === filter.label;
+
+        return hasName && hasLabel;
     });
 }
 
@@ -97,21 +98,22 @@ test('returns all on no filter', assert => {
 });
 
 
-// test('filters on type', assert => {
-//     const filter = {
-//         name: '',
-//         type: 'Angora'
-//     };
+test('filters on label', assert => {
+    const filter = {
+        name: '',
+        label: 'eat-lunch'
+    };
 
-//     const filtered = filterItems(items, filter);
+    const filtered = filterItems(todoData, filter);
 
-//     assert.deepEqual(filtered, [{
-//         name: 'Duchess',
-//         type: 'Angora'
-//     }]);
+    assert.deepEqual(filtered, [{
+        name: 'Eat Lunch',
+        label: 'eat-lunch',
+        completed: false
+    }]);
 
 
-// });
+});
 
 
 // test('DEMO TEST NUMBER A BILLION matches type as well as name', assert => {
