@@ -72,13 +72,29 @@ test('filters on name case insensitive', assert => {
 });
 
 
-// test('returns all on no filter', assert => {
-//     const filter = {
-//         name: ''
-//     };
+test('returns all on no filter', assert => {
+    const filter = {
+        name: ''
+    };
 
+    const filtered = filterItems(todoData, filter);
 
-// });
+    assert.deepEqual(filtered, [{
+        name: 'Eat Breakfast',
+        label: 'eat-breakfast',
+        completed: false
+    },
+    {
+        name: 'Eat Lunch',
+        label: 'eat-lunch',
+        completed: false
+    },
+    {
+        name: 'Eat Dinner',
+        label: 'eat-dinner',
+        completed: false
+    }]);
+});
 
 
 // test('filters on type', assert => {
