@@ -7,7 +7,8 @@ class Filter extends Component {
         const input = dom.querySelector('input');
 
         input.addEventListener('input', () => {
-            console.log(input.value);
+            //this.props.onFilter({text: })
+            this.props.onFilter(input.value);
         });
         return dom;
     }

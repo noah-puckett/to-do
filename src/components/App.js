@@ -2,6 +2,8 @@
 import Header from '../components/Header.js';
 import Component from './Component.js';
 import AddItem from '../components/AddItem.js';
+import Filter from './Filter.js';
+//import filterItems from '../filter-items.js';
 //todoData is our data array, not a component
 import todoData from '../../data/todo-data.js';
 import TodoList from './TodoList.js';
@@ -31,6 +33,17 @@ class App extends Component {
             todoData: todoData 
         };
 
+
+
+        const filter = new Filter({
+            onFilter: filter => {
+                const filtered = filterItems(items, filter);
+                todoList.update();
+                
+            }
+        });
+
+
         //we assign a new instance of our AddItem component to a var 'addItem'
         //Because AddItem inherits properties from Component, we OVERRIDE/ADD ONTO those by passing in AddItem({ onAdd:... })
         //the onAdd OBJECT KEY has a VALUE that is an ANONYMOUS FUNCTION, that we give an argument of newItem, and the code to run INSIDE the function
@@ -52,6 +65,10 @@ class App extends Component {
         //finally, we return the whole DOM we've been appending to
         return dom;
     }
+
+
+
+
 
     renderTemplate() {
         return /*html*/ `
