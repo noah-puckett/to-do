@@ -31,6 +31,12 @@ function filterItems(items, filter) {
     });
 }
 
+// string filters task
+// no string returns all tasks
+// All returns all
+// Completed returns completed
+// Not Done returns not completed
+// combo filter: string and completed
 
 
 test('filters on name', assert => {
@@ -49,18 +55,21 @@ test('filters on name', assert => {
 
 });
 
-// test('filters on name case insensitive', assert => {
-//     const filter = 'duc';
+test('filters on name case insensitive', assert => {
+    const filter = {
+        name: 'dInN'
+    };
 
-//     const filtered = filterItems(items, filter);
+    const filtered = filterItems(todoData, filter);
 
-//     assert.deepEqual(filtered, [{
-//         name: 'Duchess',
-//         type: 'Angora'
-//     }]);
+    assert.deepEqual(filtered, [{
+        name: 'Eat Dinner',
+        label: 'eat-dinner',
+        completed: false
+    }]);
 
 
-// });
+});
 
 
 // test('returns all on no filter', assert => {
