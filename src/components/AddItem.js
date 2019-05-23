@@ -32,8 +32,7 @@ class AddItem extends Component {
     renderTemplate() {
         return /*html*/ `
         <form class="add-item">
-            <label>Name: <input name="name"></label>
-            <label>Type: <input name="type"></label>
+            <label>Name Of New To-Do: <input name="name"></label>
             <button>Add Item</button>
         </form>
         `;

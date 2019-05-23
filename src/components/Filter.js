@@ -28,7 +28,25 @@ class Filter extends Component {
 
         return /*html*/`
         <section class="filter-section">
-            <input class="filter" name="filter"></input>
+            <label for="text-input">
+            Find a to-do by name:
+                <input class="filter" name="text-input">
+            </label>
+
+            <label for="radio-all">
+                Show ALL to-dos (default):
+                <input class="filter" type="radio" name="radio-all">
+            </label>
+
+            <label for="radio-incomplete">
+                Show only incomplete to-dos:
+                <input class="filter" type="radio" name="radio-incomplete">
+            </label>
+
+            <label for="radio-completed">
+                Show only completed to-dos:
+                <input class="filter" type="radio" name="radio-completed">
+            </label>
         </section>
         `;
     }

@@ -29,6 +29,9 @@ class App extends Component {
             }
         });
         
+        const addItemDOM = addItem.render();
+        main.appendChild(addItemDOM);
+        
         const filter = new Filter({
             onFilter: filter => {
                 const filtered = filterItems(todoData, filter);
@@ -37,8 +40,6 @@ class App extends Component {
         });
         
         main.appendChild(filter.render());
-        const addItemDOM = addItem.render();
-        main.appendChild(addItemDOM);
         
         const todoList = new TodoList(props);
         const todoListDOM = todoList.render();

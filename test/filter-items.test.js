@@ -32,7 +32,6 @@ function filterItems(todoData, filter) {
     });
 }
 
-// string filters task
 // no string returns all tasks
 // All returns all
 // Completed returns completed
