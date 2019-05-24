@@ -36,7 +36,6 @@ class App extends Component {
         });
         main.appendChild(filter.render());
 
-
         const todoList = new TodoList({ 
             todoData, 
             onDone: (listItem) => {
