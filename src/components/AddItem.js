@@ -6,7 +6,6 @@ class AddItem extends Component {
         const form = this.renderDOM();
         const onAdd = this.props.onAdd;
 
-        //this is our typical event listener layout
         form.addEventListener('submit', event => {
             event.preventDefault();
 

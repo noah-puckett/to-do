@@ -1,6 +1,5 @@
 function filterItems(todoData, filter) {
     
-    //OUR ARRAY LOOP
     return todoData.filter(todo => {
         const filterText = filter.text.toLowerCase();
         const name = todo.name.toLowerCase();

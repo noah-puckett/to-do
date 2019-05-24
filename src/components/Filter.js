@@ -4,8 +4,6 @@ class Filter extends Component {
 
     render() {
         const dom = this.renderDOM();
-        //THE WAY IT WAS BEFORE:
-        //const input = dom.querySelector('input');
         const form = dom.querySelector('form');
 
         form.addEventListener('input', () => {

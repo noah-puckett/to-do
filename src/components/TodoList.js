@@ -17,7 +17,6 @@ class TodoList extends Component {
     }
 
     renderTemplate() {
-        //WHAT EVEN ARE PROPS???
         const todos = this.props.todoData;
         return /*html*/ `
             <ul>${todos.length} are in my array</ul>
