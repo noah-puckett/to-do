@@ -2,17 +2,17 @@ import filterItems from '../src/filter-items.js';
 const test = QUnit.test;
 const todoData = [
     {
-        name: 'Eat Breakfast',
+        text: 'Eat Breakfast',
         label: 'eat-breakfast',
         completed: false
     },
     {
-        name: 'Eat Lunch',
+        text: 'Eat Lunch',
         label: 'eat-lunch',
         completed: true
     },
     {
-        name: 'Eat Dinner',
+        text: 'Eat Dinner',
         label: 'eat-dinner',
         completed: false
     }
@@ -30,12 +30,12 @@ test('INCOMPLETE filter returns INCOMPLETED', assert => {
 
     assert.deepEqual(filtered, [
         {
-            name: 'Eat Breakfast',
+            text: 'Eat Breakfast',
             label: 'eat-breakfast',
             completed: false
         },
         {
-            name: 'Eat Dinner',
+            text: 'Eat Dinner',
             label: 'eat-dinner',
             completed: false
         }
@@ -52,7 +52,7 @@ test('COMPLETED filter returns ONLY COMPLETED', assert => {
 
     assert.deepEqual(filtered, [
         {
-            name: 'Eat Lunch',
+            text: 'Eat Lunch',
             label: 'eat-lunch',
             completed: true
         },
@@ -69,24 +69,24 @@ test('all filter returns all', assert => {
 
     assert.deepEqual(filtered, [
         {
-            name: 'Eat Breakfast',
+            text: 'Eat Breakfast',
             label: 'eat-breakfast',
             completed: false
         },
         {
-            name: 'Eat Lunch',
+            text: 'Eat Lunch',
             label: 'eat-lunch',
             completed: true
         },
         {
-            name: 'Eat Dinner',
+            text: 'Eat Dinner',
             label: 'eat-dinner',
             completed: false
         }
     ]);
 });
 
-test('filters on name', assert => {
+test('filters on text', assert => {
     const filter = {
         text: 'bre',
         completed: 'all'
@@ -95,13 +95,13 @@ test('filters on name', assert => {
     const filtered = filterItems(todoData, filter);
 
     assert.deepEqual(filtered, [{
-        name: 'Eat Breakfast',
+        text: 'Eat Breakfast',
         label: 'eat-breakfast',
         completed: false
     }]);
 });
 
-test('filters on name case insensitive', assert => {
+test('filters on text case insensitive', assert => {
     const filter = {
         text: 'dInN',
         completed: ''
@@ -110,7 +110,7 @@ test('filters on name case insensitive', assert => {
     const filtered = filterItems(todoData, filter);
 
     assert.deepEqual(filtered, [{
-        name: 'Eat Dinner',
+        text: 'Eat Dinner',
         label: 'eat-dinner',
         completed: false
     }]);

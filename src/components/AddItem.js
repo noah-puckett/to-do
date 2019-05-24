@@ -12,7 +12,7 @@ class AddItem extends Component {
             const formData = new FormData(form);
 
             const newItem = {
-                name: formData.get('name'),
+                text: formData.get('text'),
                 completed: false
             };
 
@@ -27,7 +27,7 @@ class AddItem extends Component {
     renderTemplate() {
         return /*html*/ `
         <form class="add-item">
-            <label>Name Of New To-Do: <input name="name"></label>
+            <label>Name Of New To-Do: <input name="text"></label>
             <button>Add Item</button>
         </form>
         `;

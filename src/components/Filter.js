@@ -11,7 +11,7 @@ class Filter extends Component {
             const textResult = form.elements['text-input'].value;
             
             this.props.onFilter({
-                name: textResult, 
+                text: textResult, 
                 completed: radioResult
             });
         });

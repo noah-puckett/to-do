@@ -4,16 +4,15 @@ class ListItem extends Component {
 
     renderTemplate() {
         const item = this.props.item;
-
         let checked = '';
 
         if(item.completed) {
             checked = 'checked';
         }
-
+        
         return /*html*/ `
-        <label for="${item.label}">
-        ${item.name}
+        <label>
+        ${item.text}
             <input ${checked} type="checkbox" class="status">
         </label>`;
     }
