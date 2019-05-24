@@ -1,5 +1,5 @@
 //import and export of function threw errors, test not moved at this time
-//import htmlEqual from './html-equal.js';
+// import htmlEqual from './html-equal.js';
 const test = QUnit.test;
 QUnit.module('html whitespace scrubber');
 

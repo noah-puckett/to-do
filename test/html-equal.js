@@ -15,4 +15,4 @@ QUnit.assert.htmlEqual = function(actual, expected) {
     QUnit.assert.equal(normalizedActual, normalizedExpected);
 };
 //threw errors when exported, function kept in test instead. 
-//export default htmlEqual;
+// export default htmlEqual;
