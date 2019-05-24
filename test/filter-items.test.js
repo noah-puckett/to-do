@@ -61,7 +61,6 @@ test('COMPLETED filter returns ONLY COMPLETED', assert => {
     ]);
 });
 
-
 test('all filter returns all', assert => {
     //arrange
     const filter = {

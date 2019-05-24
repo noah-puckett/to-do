@@ -1,5 +1,5 @@
 import htmlToDOM from '../html-to-DOM.js';
-//THIS IS OUR MASTER FILE
+
 class Component {
     constructor(props) {
         this.props = props;
@@ -34,5 +34,4 @@ class Component {
         oldRoot.replaceWith(newDOM);
     }
 }
-
 export default Component;

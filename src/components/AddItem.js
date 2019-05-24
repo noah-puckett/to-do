@@ -1,6 +1,5 @@
 import Component from '../components/Component.js';
-//the AddItem component's main job is to alter how we render the HTML-- we render our form (passing in strings and returning DOM elements)
-//subscribe an event listener, and 
+
 class AddItem extends Component {
 
     render() {
@@ -15,17 +14,14 @@ class AddItem extends Component {
 
             const newItem = {
                 name: formData.get('name'),
-                type: formData.get('type')
+                completed: false
             };
 
-            //here we call our onAdd method(function?), which updates the AddItem PROPERTIES-- ultimately updating the todoData list with the newItem var
             onAdd(newItem);
 
-            //this clears our form after the submit event, then the next line deals with focusing the input field
             form.reset();
             document.activeElement.blur();
         });
-
         return form;
     }
 

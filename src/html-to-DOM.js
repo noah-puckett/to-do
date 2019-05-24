@@ -1,5 +1,5 @@
 function htmlToDOM(html) {
-    //CREATE HTML TEMPLATE ELEMENT
+    //CREATES HTML TEMPLATE ELEMENT
     const template = document.createElement('template');
     template.innerHTML = html;
     const content = template.content;

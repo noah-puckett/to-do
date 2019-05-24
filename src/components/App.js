@@ -13,8 +13,8 @@ class App extends Component {
         const dom = this.renderDOM();
         const header = new Header();
         const headerDOM = header.render();
-        const main = dom.querySelector('main');
 
+        const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
 
         const props = { 
@@ -35,11 +35,9 @@ class App extends Component {
         const filter = new Filter({
             onFilter: filter => {
                 const filtered = filterItems(todoData, filter);
-                console.log(filtered);
                 todoList.update({ todoData: filtered }); 
             }
         });
-        
         main.appendChild(filter.render());
         
         const todoList = new TodoList(props);
