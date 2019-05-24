@@ -7,8 +7,10 @@ class TodoList extends Component {
         const dom = this.renderDOM();
         const todoData = this.props.todoData;
         
+        const onDone = this.props.onDone;
+
         todoData.forEach(item => {
-            const listItem = new ListItem ({ item });
+            const listItem = new ListItem ({ item, onDone });
             const listItemDOM = listItem.render();
             dom.appendChild(listItemDOM);
         });
@@ -17,9 +19,8 @@ class TodoList extends Component {
     }
 
     renderTemplate() {
-        const todos = this.props.todoData;
         return /*html*/ `
-            <ul>${todos.length} are in my array</ul>
+        <ul></ul>
         `;
     }
 }
