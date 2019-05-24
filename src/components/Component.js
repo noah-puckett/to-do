@@ -13,8 +13,6 @@ class Component {
     renderDOM() {
         const html = this.renderTemplate();
         const dom = htmlToDOM(html);
-        // remember the dom for later
-        // for replacing or removing
         this.rootElement = dom;
         return dom;
     }
@@ -25,7 +23,7 @@ class Component {
 
     update(props) {
         props = props || {};
-        // update the props:
+  
         Object.keys(props).forEach(key => {
             this.props[key] = props[key];
         });

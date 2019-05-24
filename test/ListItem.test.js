@@ -4,7 +4,7 @@ const test = QUnit.test;
 QUnit.module('templating');
 
 test('testing template function', function(assert) {
-    //Arrange
+
     const item = {
         name: 'Water Plants',
         label: 'water-plants',
@@ -16,12 +16,9 @@ test('testing template function', function(assert) {
     Water Plants
         <input type="checkbox" class="status">
     </label>`;
-
-    //Act 
     const listItem = new ListItem({ item });
 
     const html = listItem.renderTemplate();
-   
-    //Assert
+ 
     assert.htmlEqual(html, expected);
 });

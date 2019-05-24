@@ -21,7 +21,6 @@ const todoData = [
 QUnit.module('filter items');
 
 test('INCOMPLETE filter returns INCOMPLETED', assert => {
-    //arrange
     const filter = {
         text: '',
         completed: false
@@ -44,7 +43,6 @@ test('INCOMPLETE filter returns INCOMPLETED', assert => {
 });
 
 test('COMPLETED filter returns ONLY COMPLETED', assert => {
-    //arrange
     const filter = {
         text: '',
         completed: true
@@ -62,7 +60,6 @@ test('COMPLETED filter returns ONLY COMPLETED', assert => {
 });
 
 test('all filter returns all', assert => {
-    //arrange
     const filter = {
         text: '',
         completed: ''
