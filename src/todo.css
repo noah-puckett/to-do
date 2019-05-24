@@ -1,17 +1,35 @@
-#header {
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+h1 {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
 }
 
-#tasks {
+.add-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item button {
+    display: flex;
+    align-self: center;
+    border: 2px dashed white;
+    background-color: bisque;
+    height: 100px;
+    width: 100px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.0em;
+}
+
+#app {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0;
 }
 
-#tasks label {
+#app label {
     list-style: none;
     display: flex;
     height: 100px;

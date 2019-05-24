@@ -1,32 +1,26 @@
 const todoData = [
     {
         name: 'Eat Breakfast',
-        label: 'eat-breakfast',
-        completed: false
+        completed: true
     },
     {
         name: 'Eat Lunch',
-        label: 'eat-lunch',
         completed: false
     },
     {
         name: 'Eat Dinner',
-        label: 'eat-dinner',
         completed: false
     },
     {
         name: 'Take Meds',
-        label: 'take-meds',
         completed: false
     },
     {
         name: 'Feed Pet Snake',
-        label: 'feed-pet-snake',
         completed: false
     },
     {
         name: 'Water Plants',
-        label: 'water-plants',
         completed: false
     },
 ];

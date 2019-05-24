@@ -1,12 +1,12 @@
 import Component from '../components/Component.js';
-//I DO NOT KNOW WHAT THIS FILE DOES
+
 class AddItem extends Component {
 
     render() {
         const form = this.renderDOM();
         const onAdd = this.props.onAdd;
 
-
+        //this is our typical event listener layout
         form.addEventListener('submit', event => {
             event.preventDefault();
 
@@ -14,7 +14,7 @@ class AddItem extends Component {
 
             const newItem = {
                 name: formData.get('name'),
-                type: formData.get('type')
+                completed: false
             };
 
             onAdd(newItem);
@@ -22,16 +22,14 @@ class AddItem extends Component {
             form.reset();
             document.activeElement.blur();
         });
-
         return form;
     }
 
     renderTemplate() {
         return /*html*/ `
         <form class="add-item">
-            <label>Name: <input name="name"></label>
-            <label>Type: <input name="type"></label>
-            <button>Add</button>
+            <label>Name Of New To-Do: <input name="name"></label>
+            <button>Add Item</button>
         </form>
         `;
     }

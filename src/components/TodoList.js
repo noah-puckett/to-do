@@ -1,6 +1,6 @@
 import Component from '../components/Component.js';
 import ListItem from '../components/ListItem.js';
-//THIS FILE does SOMETHING but I don't actually know WHAT
+
 class TodoList extends Component {
 
     render() {
@@ -12,7 +12,7 @@ class TodoList extends Component {
             const listItemDOM = listItem.render();
             dom.appendChild(listItemDOM);
         });
-
+        
         return dom;
     }
 
