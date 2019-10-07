@@ -16,10 +16,6 @@ class App extends Component {
 
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
-
-        const props = { 
-            todoData: todoData 
-        };
         
         const addItem = new AddItem({
             onAdd: (newItem) => { 
@@ -28,7 +24,7 @@ class App extends Component {
                 filter.update(); 
             }
         });
-        
+  
         const addItemDOM = addItem.render();
         main.appendChild(addItemDOM);
         
@@ -39,8 +35,16 @@ class App extends Component {
             }
         });
         main.appendChild(filter.render());
-        
-        const todoList = new TodoList(props);
+
+        const todoList = new TodoList({ 
+            todoData, 
+            onDone: (listItem) => {
+                listItem.completed = !listItem.completed;
+                todoList.update({ todoData });
+                return listItem;
+            }
+        });
+
         const todoListDOM = todoList.render();
         main.appendChild(todoListDOM);
 

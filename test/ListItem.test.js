@@ -13,7 +13,7 @@ test('testing ListItem function', function(assert) {
     const expected = /*html*/ `
     <label>
     Water Plants
-        <input type="checkbox" class="status">
+        <input id="checkbox" type="checkbox" class="status">
     </label>`;
     const listItem = new ListItem({ item });
 
