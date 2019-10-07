@@ -5,3 +5,4 @@ import './ListItem.test.js';
 import './html-equal.test.js';
 import './html-to-dom.test.js';
 import './filter-items.test.js';
+import './on-done.test.js';

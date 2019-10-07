@@ -3,18 +3,17 @@ const test = QUnit.test;
 
 QUnit.module('templating');
 
-test('testing template function', function(assert) {
+test('testing ListItem function', function(assert) {
 
     const item = {
-        name: 'Water Plants',
-        label: 'water-plants',
+        text: 'Water Plants',
         completed: false
     };
 
     const expected = /*html*/ `
-    <label for="water-plants">
+    <label>
     Water Plants
-        <input type="checkbox" class="status">
+        <input id="checkbox" type="checkbox" class="status">
     </label>`;
     const listItem = new ListItem({ item });
 

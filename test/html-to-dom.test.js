@@ -1,4 +1,4 @@
-import htmlToDOM from '../src/html-to-DOM.js';
+import htmlToDOM from '../src/html-to-dom.js';
 const test = QUnit.test;
 
 QUnit.module('DOM creation? template? something???');

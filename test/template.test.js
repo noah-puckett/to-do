@@ -5,9 +5,9 @@ const test = QUnit.test;
 QUnit.module('templating');
 
 test('testing template function', function(assert) {
-    
+
     const expected = /*html*/ `
-    <label for="water-plants">
+    <label>
     Water Plants
         <input type="checkbox" class="status">
     </label>`;

@@ -17,9 +17,10 @@ h1 {
     border: 2px dashed white;
     background-color: bisque;
     height: 100px;
-    width: 100px;
+    width: 300px;
     font-family: 'Permanent Marker', cursive;
     font-size: 1.0em;
+    justify-content: center;
 }
 
 #app {
